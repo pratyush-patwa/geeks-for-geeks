@@ -33,7 +33,7 @@ Testcase 2: There are no triplets hence -1
 import java.util.*;
 import java.lang.*;
 import java.io.*;
-class GFG
+class CountTheTriplets
  {
 	public static void main (String[] args)
 	 {
