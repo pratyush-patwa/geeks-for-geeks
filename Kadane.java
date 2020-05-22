@@ -1,6 +1,6 @@
 import java.lang.*;
 import java.io.*;
-class Kadane1{
+class Kadane{
 	public static void main (String[] args){
 	    Scanner sc = new Scanner(System.in);
         int t = sc.nextInt();
