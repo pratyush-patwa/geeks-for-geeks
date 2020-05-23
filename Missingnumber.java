@@ -43,12 +43,14 @@ class Missingnumber
 	        int sum=0, missingNumber=0, total=0;
 	        int n= sc.nextInt();
 	        int []c = new int[n-1];
+		 // Taking sum of the available elemnts in the array 
 	        for(int i=0; i<n-1; i++){
 	            c[i]= sc.nextInt();
 	            sum += c[i];
 	        }
+		// calculating total of 1to n series with forumala (n*(n+1))/2    
 	        total= (n*(n+1))/2;
-
+		// Subtracting total of 1 to n  -  sum of available elements in array
 	        missingNumber = total - sum; 
 	        System.out.println(missingNumber);
 	        t--;
