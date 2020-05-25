@@ -72,3 +72,52 @@ class Anagram{
 	return true;
 	}
 }
+
+
+
+!----------!------------!-----------!---------!-----------!
+	//The Complexity is O(N)
+import java.util.*;
+
+class Anagram{
+	public static void main (String[] args){
+		Scanner sc = new Scanner(System.in);
+	    int t  = sc.nextInt();
+		boolean flag;
+
+		    while(t>0){
+		        String str1 = sc.next();
+		        String str2 = sc.next();
+		        //If string length differs print No else Check for Anagram
+		        if(str1.length() != str2.length()){
+		            System.out.println("NO");
+		        }
+		        else{
+		            flag = isAnagram(str1,str2);
+		            System.out.println((flag== true)?"YES":"NO"); 
+		        }
+		        t--;
+		    }
+		    sc.close();
+		}
+		public static boolean isAnagram(String s1, String s2){
+			
+			char []arr1 = new char[26];
+			char []arr2 = new char[26];
+			for(int i=0; i<s1.length(); i++) {
+				arr1[s1.charAt(i)-'a'] +=1;
+			}
+			for(int j=0; j<s2.length(); j++) {
+				arr2[s2.charAt(j)-'a'] +=1;
+			}
+			
+			for(int k=0; k<26; k++) {
+				if(arr1[k] != arr2[k])
+					return false;
+			}
+		return true;
+		}
+}
+
+	
+	
